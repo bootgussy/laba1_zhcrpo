@@ -85,6 +85,26 @@ public class Complex {
         return this;
     }
 
+    public Complex power3() {
+        double a = re;
+        double b = im;
+
+        re = a*a*a - 3*a*b*b;
+        im = 3*a*a*b - b*b*b;
+
+        return this;
+    }
+
+    public Complex power4() {
+        double a = re;
+        double b = im;
+
+        re = a*a*a*a - 6*a*a*b*b + b*b*b*b;
+        im = 4*a*a*a*b - 4*a*b*b*b;
+
+        return this;
+    }
+
     /**
      * Square of Complex object's length, we're using square of length to 
      * eliminate the computation of square root
